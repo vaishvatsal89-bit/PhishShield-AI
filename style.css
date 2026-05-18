@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0b1020,#111827);
+    color:white;
+    overflow:hidden;
+}
+
+/* FULL PAGE */
+.page{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+}
+
+/* LOGO TOP LEFT */
+.logo{
+    position:absolute;
+    top:25px;
+    left:25px;
+}
+
+.logo img{
+    width:60px;
+    border-radius:50%;
+    box-shadow:0 0 20px rgba(0,255,229,0.4);
+}
+
+/* CENTER CONTENT */
+.home-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* HEADING */
+.home-container h1{
+    font-size:4rem;
+    color:#00ffe5;
+    letter-spacing:3px;
+    margin-bottom:15px;
+    text-shadow:0 0 20px rgba(0,255,229,0.5);
+}
+
+/* TAGLINE */
+.tagline{
+    color:#cbd5e1;
+    font-size:1.1rem;
+    margin-bottom:40px;
+    max-width:500px;
+    line-height:1.6;
+}
+
+/* MAIN IMAGE */
+.shield-img{
+    width:220px;
+    margin-bottom:50px;
+
+    filter:drop-shadow(0 0 25px rgba(0,255,229,0.4));
+}
+
+/* BUTTON */
+#startBtn{
+    padding:15px 40px;
+    border:none;
+    border-radius:40px;
+
+    background: linear-gradient(90deg,#06b6d4,#7c3aed);
+
+    color:white;
+    font-size:1rem;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+
+    box-shadow:0 0 20px rgba(124,58,237,0.4);
+}
+
+/* BUTTON HOVER */
+#startBtn:hover{
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 20px rgba(6,182,212,0.6),
+    0 0 40px rgba(124,58,237,0.5);
+}
+body::before{
+    content:"";
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    background:#7c3aed;
+
+    filter:blur(150px);
+
+    top:-100px;
+    right:-100px;
+
+    opacity:0.3;
+
+    z-index:-1;
+}
+.shield-img{
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+@media(max-width:768px){
+
+    .home-container h1{
+        font-size:2.5rem;
+    }
+
+    .shield-img{
+        width:170px;
+    }
+
+    .tagline{
+        font-size:1rem;
+    }
+
+}
