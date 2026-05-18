@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>history</title>
+    <title>Scan History | PhishShield AI</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="PhishShield AI home">
+            <img src="mainlogo.jpeg" alt="PhishShield AI logo">
+            <span>PhishShield AI</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Dashboard</a>
+            <a href="search.html">Scan</a>
+            <a class="active" href="history.html">History</a>
+            <a href="awareness.html">Awareness</a>
+        </nav>
+    </header>
+
+    <main class="workspace">
+        <section class="history-header">
+            <div class="section-heading compact">
+                <p class="eyebrow">Evidence archive</p>
+                <h1>Scan history</h1>
+            </div>
+            <button id="clearHistory" class="btn secondary" type="button">Clear history</button>
+        </section>
+
+        <section id="historyList" class="history-list" aria-live="polite"></section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

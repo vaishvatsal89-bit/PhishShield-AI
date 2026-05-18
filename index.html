@@ -3,38 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhishShield AI</title>
+    <title>PhishShield AI | Phishing Detection</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="PhishShield AI home">
+            <img src="mainlogo.jpeg" alt="PhishShield AI logo">
+            <span>PhishShield AI</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a class="active" href="index.html">Dashboard</a>
+            <a href="search.html">Scan</a>
+            <a href="history.html">History</a>
+            <a href="awareness.html">Awareness</a>
+        </nav>
+    </header>
 
-<section id="homePage" class="page">
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <p class="eyebrow">AI-assisted threat triage</p>
+                <h1>Phishing detection that feels fast, clear, and trustworthy.</h1>
+                <p class="hero-copy">
+                    Analyze suspicious links and message content with transparent risk signals, readable recommendations, and saved scan history.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="search.html">Start scan</a>
+                    <a class="btn secondary" href="awareness.html">Learn defenses</a>
+                </div>
+            </div>
+            <div class="hero-panel" aria-label="Security overview">
+                <div class="risk-card">
+                    <div>
+                        <span class="status-dot warning"></span>
+                        <span class="muted">Live risk preview</span>
+                    </div>
+                    <strong>Suspicious</strong>
+                    <span class="score">78</span>
+                    <small>URL shortener, urgency language, and mismatched brand terms detected.</small>
+                </div>
+                <div class="mini-grid">
+                    <div>
+                        <span>URL checks</span>
+                        <strong>12</strong>
+                    </div>
+                    <div>
+                        <span>Content flags</span>
+                        <strong>6</strong>
+                    </div>
+                    <div>
+                        <span>Saved scans</span>
+                        <strong id="homeHistoryCount">0</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- TOP LEFT LOGO -->
-    <div class="logo">
-        <img src="mainlogo.jpeg" alt="logo">
-    </div>
+        <section class="feature-band">
+            <div class="section-heading">
+                <p class="eyebrow">What you get</p>
+                <h2>Complete scanning workflow</h2>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="feature-icon">01</span>
+                    <h3>URL inspection</h3>
+                    <p>Checks domain shape, HTTPS, shorteners, IP addresses, risky keywords, redirects hints, and uncommon structure.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon">02</span>
+                    <h3>Message analysis</h3>
+                    <p>Flags urgency, credential requests, money pressure, attachment bait, impersonation language, and suspicious calls to action.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon">03</span>
+                    <h3>Actionable report</h3>
+                    <p>Shows a risk score, severity label, evidence list, recommended next steps, and stores results for future review.</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
-    <!-- CENTER CONTENT -->
-    <div class="home-container">
-
-        <h1>PHISH SHIELD AI</h1>
-
-        <p class="tagline">
-            Detect phishing links using AI-powered security
-        </p>
-
-        <img src="mainlogo.jpeg"
-             alt="shield"
-             class="shield-img">
-
-        <a href="search.html" id="startBtn">Get Started</a>
-        <!-- <button id="startBtn" >Get Started</button> -->
-    </div>
-
-</section>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

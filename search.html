@@ -3,11 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check the link></title>
+    <title>Scan Link | PhishShield AI</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="PhishShield AI home">
+            <img src="mainlogo.jpeg" alt="PhishShield AI logo">
+            <span>PhishShield AI</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Dashboard</a>
+            <a class="active" href="search.html">Scan</a>
+            <a href="history.html">History</a>
+            <a href="awareness.html">Awareness</a>
+        </nav>
+    </header>
+
+    <main class="workspace">
+        <section class="scan-layout">
+            <div class="scanner-panel">
+                <div class="section-heading compact">
+                    <p class="eyebrow">Threat scanner</p>
+                    <h1>Check a suspicious URL or message</h1>
+                </div>
+
+                <form id="scanForm" class="scan-form">
+                    <label for="scanInput">URL or message text</label>
+                    <textarea id="scanInput" rows="8" placeholder="Paste a link, email, SMS, or social message here..." required></textarea>
+
+                    <div class="form-row">
+                        <label class="toggle">
+                            <input id="deepScan" type="checkbox" checked>
+                            <span>Deep heuristic scan</span>
+                        </label>
+                        <button class="btn primary" type="submit">Analyze threat</button>
+                    </div>
+                </form>
+
+                <div class="quick-examples">
+                    <button type="button" data-example="https://secure-paypaI-login.com/verify-account?session=bonus">Suspicious URL</button>
+                    <button type="button" data-example="Your bank account will be locked in 2 hours. Verify your password now at http://bit.ly/login-help">Urgent SMS</button>
+                    <button type="button" data-example="https://www.google.com/security/checkup">Safe example</button>
+                </div>
+            </div>
+
+            <aside id="resultPanel" class="result-panel empty" aria-live="polite">
+                <div class="empty-state">
+                    <img src="mainlogo.jpeg" alt="">
+                    <h2>Awaiting scan</h2>
+                    <p>Results will show risk score, evidence, and next actions after analysis.</p>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
